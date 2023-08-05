@@ -19,8 +19,18 @@
 	</div>
 </WidthControl>
 
+<img src="/images/blobs/3.png" />
+
 <style lang="scss">
 	@import '@/styles/variables.scss';
+
+	img {
+		position: absolute;
+		left:0;
+		bottom: 0;
+		z-index: -1;
+		width: 75%;
+	}
 
 	.footer {
 		display: flex;

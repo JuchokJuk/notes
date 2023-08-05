@@ -1,10 +1,7 @@
 <script lang="ts">
 	import Body1 from '$lib/shared/fontSystem/body/body1/Body1.svelte';
-	// import Body10 from "$lib/shared/fontSystem/body/body10/Body10.svelte";
 	import Body3 from '$lib/shared/fontSystem/body/body3/Body3.svelte';
-	// import Body5 from "$lib/shared/fontSystem/body/body5/Body5.svelte";
 	import Headline1 from '$lib/shared/fontSystem/headlines/headline1/Headline1.svelte';
-	// import Headline5 from "$lib/shared/fontSystem/headlines/headline5/Headline5.svelte";
 	import WidthControl from '$lib/feature/WidthControl.svelte';
 </script>
 

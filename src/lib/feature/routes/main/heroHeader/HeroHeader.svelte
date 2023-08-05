@@ -9,6 +9,7 @@
 
 <WidthControl>
 	<div class="hero-header-container">
+		<img src="/images/blobs/1.png" />
 		<div class="hero-header">
 			<div class="hero-header__top">
 				<div class="headline">

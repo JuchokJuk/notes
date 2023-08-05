@@ -91,7 +91,12 @@
 		display: none;
 	}
 	.about-container {
+
+		background: url('/images/blobs/2.png') no-repeat center right;
+		background-size: contain;
+
 		@include indent(margin-bottom, red);
+
 		.about__slide {
 			@include xxl() {
 				height: 532px;

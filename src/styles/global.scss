@@ -4,27 +4,32 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: rgba(255, 255, 255, 0.2);
+	}
+	
+	&::-webkit-scrollbar-corner {
+		background: transparent;
+	}
 }
 
 :root {
 	color-scheme: dark;
 }
 
-html,
-body {
-	height: 100%;
+html {
 	scroll-behavior: smooth;
 }
 
-*::-webkit-scrollbar {
-	width: 8px;
-}
-
-*::-webkit-scrollbar-thumb {
-	background: rgba(255, 255, 255, 0.2);
-}
-*::-webkit-scrollbar-corner {
-	background: transparent;
+html,
+body {
+	height: 100%;
 }
 
 // fonts

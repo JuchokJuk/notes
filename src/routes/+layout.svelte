@@ -48,6 +48,7 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		overflow-x: hidden;
 	}
 
 	.content {
@@ -55,6 +56,7 @@
 	}
 
 	.footer {
+		position: relative;
 		flex: 0 0 auto;
 	}
 </style>

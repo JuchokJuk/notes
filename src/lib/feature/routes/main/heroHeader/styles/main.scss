@@ -4,6 +4,17 @@
 	display: flex;
 	flex-direction: column;
 
+	position: relative;
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		width: 175%;
+	}
+
 	.hero-header {
 		@include indent(margin-top, red);
 		@include indent(margin-bottom, pink);
@@ -18,11 +29,6 @@
 				display: flex;
 				justify-content: center;
 				flex-direction: column;
-
-				&-wrapper {
-					.name {
-					}
-				}
 			}
 		}
 
