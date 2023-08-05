@@ -1,0 +1,281 @@
+$min-screen-xxl: 2300px;
+
+$min-screen-xl: 1680px;
+$max-screen-xl: $min-screen-xxl - 0.2px;
+
+$min-screen-l: 1024px;
+$max-screen-l: $min-screen-xl - 0.2px;
+
+$min-screen-m: 768px;
+$max-screen-m: $min-screen-l - 0.2px;
+
+$max-screen-s: $min-screen-m - 0.2px;
+
+@mixin xxl {
+	@media (min-width: $min-screen-xxl) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media (min-width: $min-screen-xl) and (max-width: $max-screen-xl) {
+		@content;
+	}
+}
+
+@mixin l {
+	@media (min-width: $min-screen-l) and (max-width: $max-screen-l) {
+		@content;
+	}
+}
+
+@mixin m {
+	@media (min-width: $min-screen-m) and (max-width: $max-screen-m) {
+		@content;
+	}
+}
+
+@mixin s {
+	@media (max-width: $max-screen-s) {
+		@content;
+	}
+}
+
+$content-xxl: 1700px;
+$content-xl: 1400px;
+$content-l: 924px;
+$content-m: 688px;
+$content-s: 280px;
+
+$gap-xxl: 40px;
+$gap-xl: 32px;
+$gap-l: 28px;
+$gap-m: 24px;
+$gap-s: 18px;
+
+$column-xxl: calc(($content-xxl - $gap-xxl * 11) / 12);
+$column-xl: calc(($content-xl - $gap-xl * 11) / 12);
+$column-l: calc(($content-l - $gap-l * 11) / 12);
+$column-m: calc(($content-m - $gap-m * 11) / 12);
+$column-s: calc(($content-s - $gap-s * 1) / 2);
+
+@mixin column($count) {
+	@include xxl() {
+		$width: $count * $column-xxl + $gap-xxl * ($count - 1);
+		width: $width;
+		min-width: $width;
+	}
+	@include xl() {
+		$width: $count * $column-xl + $gap-xl * ($count - 1);
+		width: $width;
+		min-width: $width;
+	}
+	@include l() {
+		$width: $count * $column-l + $gap-l * ($count - 1);
+		width: $width;
+		min-width: $width;
+	}
+	@include m() {
+		$width: $count * $column-m + $gap-m * ($count - 1);
+		width: $width;
+		min-width: $width;
+	}
+	@include s() {
+		$width: $count * $column-s + $gap-s * ($count - 1);
+		width: $width;
+		min-width: $width;
+	}
+}
+
+@mixin column-gap($property, $count) {
+	@include xxl() {
+		#{$property}: $count * $column-xxl + ($count + 1) * $gap-xxl;
+	}
+	@include xl() {
+		#{$property}: $count * $column-xl + ($count + 1) * $gap-xl;
+	}
+	@include l() {
+		#{$property}: $count * $column-l + ($count + 1) * $gap-l;
+	}
+	@include m() {
+		#{$property}: $count * $column-m + ($count + 1) * $gap-m;
+	}
+	@include s() {
+		#{$property}: $count * $column-s + ($count + 1) * $gap-s;
+	}
+}
+
+$black-1: #000000;
+$black-2: #0e0e0e;
+
+$white-1: #ffffff;
+$white-2: #9f9f9f;
+$white-3: #909090;
+
+$indents: (
+	red: (
+		xxl: 230px,
+		xl: 200px,
+		l: 120px,
+		m: 100px,
+		s: 80px
+	),
+	deep-pink: (
+		xxl: 185px,
+		xl: 151px,
+		l: 108px,
+		m: 82px,
+		s: 82px
+	),
+	yellow: (
+		xxl: 140px,
+		xl: 116px,
+		l: 72px,
+		m: 72px,
+		s: 50px
+	),
+	pink: (
+		xxl: 130px,
+		xl: 100px,
+		l: 70px,
+		m: 60px,
+		s: 40px
+	),
+	orange: (
+		xxl: 104px,
+		xl: 86px,
+		l: 50px,
+		m: 38px,
+		s: 38px,
+		// unused
+	),
+	gold: (
+		xxl: 88px,
+		xl: 78px,
+		l: 40px,
+		m: 24px,
+		s: 24px
+	),
+	peach-puff: (
+		xxl: 84px,
+		xl: 70px,
+		l: 38px,
+		m: 38px,
+		// unused
+		s: 14px
+	),
+	green: (
+		xxl: 80px,
+		xl: 54px,
+		l: 44px,
+		m: 37px,
+		s: 30px
+	),
+	olive: (
+		xxl: 64px,
+		xl: 52px,
+		l: 36px,
+		m: 20px,
+		s: 20px,
+		// unused
+	),
+	teal: (
+		xxl: 60px,
+		xl: 46px,
+		l: 34px,
+		m: 34px,
+		// unused
+		s: 34px,
+		// unused
+	),
+	lime: (
+		xxl: 58px,
+		xl: 44px,
+		l: 44px,
+		// unused
+		m: 16px,
+		s: 22px
+	),
+	blue: (
+		xxl: 44px,
+		xl: 36px,
+		l: 30px,
+		m: 26px,
+		s: 26px
+	),
+	steel-blue: (
+		xxl: 40px,
+		xl: 32px,
+		l: 30px,
+		m: 28px,
+		// unused
+		s: 18px
+	),
+	aqua: (
+		xxl: 46px,
+		xl: 30px,
+		l: 24px,
+		m: 18px,
+		s: 10px
+	),
+	indigo: (
+		xxl: 32px,
+		xl: 26px,
+		l: 26px,
+		m: 26px,
+		// unused
+		s: 28px
+	),
+	blue-violet: (
+		xxl: 30px,
+		xl: 24px,
+		l: 21px,
+		m: 21px,
+		// unused
+		s: 21px
+	),
+	aquamarine: (
+		xxl: 20px,
+		xl: 20px,
+		l: 16px,
+		m: 14px,
+		s: 12px
+	),
+	black: (
+		xxl: 16px,
+		xl: 14px,
+		l: 10px,
+		m: 6px,
+		s: 6px
+	)
+);
+
+@mixin indent($property, $color) {
+	@include xxl {
+		#{$property}: map-get(map-get($indents, $color), xxl);
+	}
+	@include xl {
+		#{$property}: map-get(map-get($indents, $color), xl);
+	}
+	@include l {
+		#{$property}: map-get(map-get($indents, $color), l);
+	}
+	@include m {
+		#{$property}: map-get(map-get($indents, $color), m);
+	}
+	@include s {
+		#{$property}: map-get(map-get($indents, $color), s);
+	}
+}
+
+@mixin hover() {
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin round-border() {
+	border-radius: 9999px;
+}

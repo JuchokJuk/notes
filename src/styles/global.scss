@@ -1,0 +1,157 @@
+@import './variables.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	color-scheme: dark;
+}
+
+html,
+body {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+	width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.2);
+}
+*::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+// fonts
+
+// Inter
+
+@font-face {
+	font-family: Inter;
+	src: url('/fonts/Inter/Inter-Thin.ttf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url('/fonts/Inter/Inter-ExtraLight.ttf');
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url('/fonts/Inter/Inter-Light.ttf');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url('/fonts/Inter/Inter-Regular.ttf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url('/fonts/Inter/Inter-Medium.ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url('/fonts/Inter/Inter-SemiBold.ttf');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url('/fonts/Inter/Inter-Bold.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url('/fonts/Inter/Inter-ExtraBold.ttf');
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: Inter;
+	src: url('/fonts/Inter/Inter-Black.ttf');
+	font-weight: 900;
+}
+
+// JetBrains Mono
+
+@font-face {
+	font-family: JetBrains Mono;
+	src: url('/fonts/JetBrains Mono/JetBrainsMono-Thin.ttf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: JetBrains Mono;
+	src: url('/fonts/JetBrains Mono/JetBrainsMono-ExtraLight.ttf');
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: JetBrains Mono;
+	src: url('/fonts/JetBrains Mono/JetBrainsMono-Light.ttf');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: JetBrains Mono;
+	src: url('/fonts/JetBrains Mono/JetBrainsMono-Regular.ttf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: JetBrains Mono;
+	src: url('/fonts/JetBrains Mono/JetBrainsMono-Medium.ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: JetBrains Mono;
+	src: url('/fonts/JetBrains Mono/JetBrainsMono-SemiBold.ttf');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: JetBrains Mono;
+	src: url('/fonts/JetBrains Mono/JetBrainsMono-Bold.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: JetBrains Mono;
+	src: url('/fonts/JetBrains Mono/JetBrainsMono-ExtraBold.ttf');
+	font-weight: 800;
+}
+
+body {
+	background: $black-2;
+	color: $white-1;
+	font-family: Inter;
+}
+
+input,
+a,
+button {
+	all: unset;
+}
+
+a,
+button {
+	cursor: pointer;
+}
+
+svg {
+	flex-shrink: 0;
+}

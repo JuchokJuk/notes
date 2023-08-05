@@ -1,0 +1,26 @@
+@import '@/styles/variables.scss';
+
+.body9 {
+	font-family: JetBrains Mono;
+	font-weight: 400;
+	@include xxl() {
+		font-size: 22px;
+		line-height: 150%;
+	}
+	@include xl() {
+		font-size: 18px;
+		line-height: 160%;
+	}
+	@include l() {
+		font-size: 16px;
+		line-height: 160%;
+	}
+	@include m() {
+		font-size: 16px;
+		line-height: 160%;
+	}
+	@include s() {
+		font-size: 14px;
+		line-height: 148%;
+	}
+}

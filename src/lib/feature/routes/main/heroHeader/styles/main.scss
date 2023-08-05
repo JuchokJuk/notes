@@ -1,0 +1,47 @@
+@import '@/styles/variables.scss';
+
+.hero-header-container {
+	display: flex;
+	flex-direction: column;
+
+	.hero-header {
+		@include indent(margin-top, red);
+		@include indent(margin-bottom, pink);
+
+		&__top {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			&__author {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+
+				&-wrapper {
+					.name {
+					}
+				}
+			}
+		}
+
+		&__bottom {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			&__genre {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	.buttons-container {
+		align-self: flex-end;
+		display: grid;
+		@include column-gap(gap, 0);
+		@include indent(margin-bottom, red);
+	}
+}

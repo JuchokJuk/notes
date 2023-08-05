@@ -1,0 +1,66 @@
+@import '@/styles/variables.scss';
+
+@include m() {
+	.hero-header-container {
+		.hero-header {
+			&__top {
+				border-top: 1px solid $white-1;
+				border-bottom: 1px solid $white-1;
+				height: 106px;
+
+				&__author {
+					height: 106px;
+
+					@include column(3);
+					align-items: end;
+					border-left: 1px solid $white-1;
+
+					&-wrapper {
+						.name {
+							display: flex;
+							flex-direction: column;
+						}
+					}
+				}
+			}
+
+			&__bottom {
+				border-bottom: 1px solid $white-1;
+				height: 106px;
+
+				&__genre {
+					border-right: 1px solid $white-1;
+					height: 106px;
+					@include column(3);
+				}
+
+				.note {
+					width: 100%;
+					// background: pink;
+					border-right: 1px solid $white-1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					height: 106px;
+
+					:global(svg) {
+						height: 32px;
+						width: 35px;
+					}
+				}
+
+				.headline {
+					@include column(8);
+					display: flex;
+					justify-content: end;
+				}
+			}
+		}
+		.buttons-container {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			@include column(10);
+		}
+	}
+}

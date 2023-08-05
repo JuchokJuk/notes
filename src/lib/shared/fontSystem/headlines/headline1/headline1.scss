@@ -1,0 +1,26 @@
+@import '@/styles/variables.scss';
+
+.headline1 {
+	font-family: inter;
+	font-weight: 500;
+	@include xxl() {
+		font-size: 172px;
+		line-height: 208px;
+	}
+	@include xl() {
+		font-size: 142px;
+		line-height: 172px;
+	}
+	@include l() {
+		font-size: 94px;
+		line-height: 114px;
+	}
+	@include m() {
+		font-size: 70px;
+		line-height: 85px;
+	}
+	@include s() {
+		font-size: 38px;
+		line-height: 46px;
+	}
+}

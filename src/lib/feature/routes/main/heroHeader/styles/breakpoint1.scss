@@ -1,0 +1,95 @@
+@import '@/styles/variables.scss';
+
+@include s() {
+	.hero-header-container {
+		.hero-header {
+			position: relative;
+			height: 319px;
+
+			&__top {
+				&__author {
+					&-wrapper {
+						height: 90px;
+						width: 200px;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						display: flex;
+						justify-content: center;
+						flex-direction: column;
+						border-bottom: 1px solid $white-1;
+						border-top: 1px solid $white-1;
+						border-right: 1px solid $white-1;
+
+						.name {
+							margin-top: 6px;
+							display: flex;
+							flex-direction: row;
+						}
+					}
+				}
+
+				.headline {
+					@include column(2);
+					height: 90px;
+					position: absolute;
+					top: 49px;
+					right: 0;
+					left: 0;
+					display: flex;
+					align-items: center;
+					border-bottom: 1px solid $white-1;
+				}
+			}
+
+			&__bottom {
+				&__genre {
+					position: absolute;
+					top: 0;
+					right: 0;
+					left: 0;
+					border-top: 1px solid $white-1;
+					border-bottom: 1px solid $white-1;
+					@include indent(padding-top, peach-puff);
+					@include indent(padding-bottom, peach-puff);
+					@include column(2);
+				}
+
+				.note {
+					width: 80px;
+					height: 90px;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-top: 1px solid $white-1;
+					border-bottom: 1px solid $white-1;
+
+					:global(svg) {
+						height: 30px;
+						width: 32px;
+					}
+				}
+
+				.headline {
+					height: 90px;
+					position: absolute;
+					top: 139px;
+					right: 0;
+					display: flex;
+					align-items: center;
+					// border-bottom: 1px solid $white-1;
+					border-left: 1px solid $white-1;
+					@include indent(padding-left, blue);
+				}
+			}
+		}
+		.buttons-container {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr;
+			@include column(2);
+		}
+	}
+}
