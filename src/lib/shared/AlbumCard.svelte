@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Album } from '$lib/feature/Albums';
 	import Headline7 from '$lib/shared/fontSystem/headlines/headline7/Headline7.svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import ArrowButton from './buttons/ArrowButton.svelte';
 
 	export let album: Album;
@@ -8,12 +9,31 @@
 	let video: HTMLVideoElement;
 
 	function play() {
-		video.play();
+		if (!touchScreen) video.play();
 	}
 
 	function pause() {
-		video.pause();
+		if (!touchScreen) video.pause();
 	}
+
+	//
+
+	let touchScreen: boolean = false;
+	let media: MediaQueryList | undefined;
+
+	function checkPointer() {
+		touchScreen = media!.matches;
+	}
+
+	onMount(() => {
+		media = matchMedia('(hover: none) and (pointer: coarse)');
+		media.addEventListener('change', checkPointer);
+		checkPointer();
+	});
+
+	onDestroy(() => {
+		media?.removeEventListener('change', checkPointer);
+	});
 </script>
 
 <a on:mouseover={play} on:mouseleave={pause} href={`/albums/${album.id}`}>
@@ -27,7 +47,7 @@
 	a {
 		cursor: pointer;
 		border-radius: 8px;
-		border: 1px solid $white-1;
+		border: 1px solid var(--white-1);
 
 		display: grid;
 		grid-template-columns: 1fr;

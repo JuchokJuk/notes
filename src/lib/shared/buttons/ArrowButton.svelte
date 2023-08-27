@@ -15,7 +15,7 @@
 
 	button {
 		cursor: pointer;
-		border: 1.5px solid $white-1;
+		border: 1.5px solid var(--white-1);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -25,8 +25,8 @@
 		@include round-border();
 
 		@include hover() {
-			background: $white-1;
-			color: $black-1;
+			background: var(--white-1);
+			color: var(--black-1);
 		}
 
 		@include xxl() {
@@ -48,7 +48,7 @@
 		:global(svg) {
 			transition: transform 0.4s, fill 0.4s;
 			@include indent(margin-left, aquamarine);
-			fill: $white-1;
+			fill: var(--white-1);
 
 			@include xxl() {
 				width: 18.17px;
@@ -70,7 +70,7 @@
 	:global(button:hover svg) {
 		@media (hover: hover) and (pointer: fine) {
 			transform: translateX(0.25em);
-			fill: $black-1;
+			fill: var(--black-1);
 		}
 	}
 </style>

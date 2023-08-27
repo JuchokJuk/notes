@@ -4,8 +4,8 @@
 	.hero-header-container {
 		.hero-header {
 			&__top {
-				border-top: 1px solid $white-1;
-				border-bottom: 1px solid $white-1;
+				border-top: 1px solid var(--white-1);
+				border-bottom: 1px solid var(--white-1);
 				height: 142px;
 
 				&__author {
@@ -13,7 +13,7 @@
 
 					@include column(3);
 					align-items: end;
-					border-left: 1px solid $white-1;
+					border-left: 1px solid var(--white-1);
 
 					&-wrapper {
 						.name {
@@ -25,11 +25,11 @@
 			}
 
 			&__bottom {
-				border-bottom: 1px solid $white-1;
+				border-bottom: 1px solid var(--white-1);
 				height: 142px;
 
 				&__genre {
-					border-right: 1px solid $white-1;
+					border-right: 1px solid var(--white-1);
 					height: 142px;
 					@include indent(padding-right, blue-violet);
 				}
@@ -37,7 +37,7 @@
 				.note {
 					width: 100%;
 					// background: pink;
-					border-right: 1px solid $white-1;
+					border-right: 1px solid var(--white-1);
 					display: flex;
 					align-items: center;
 					justify-content: center;

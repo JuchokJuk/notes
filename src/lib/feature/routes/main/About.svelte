@@ -64,22 +64,22 @@
 		}}
 	>
 		<SplideSlide>
-			<img class="about__slide" src="/images/1.png" />
+			<img class="about__slide" src="/images/1.png" width="831" height="532" />
 		</SplideSlide>
 		<SplideSlide>
-			<img class="about__slide" src="/images/2.png" />
+			<img class="about__slide" src="/images/2.png" width="831" height="532" />
 		</SplideSlide>
 		<SplideSlide>
-			<img class="about__slide" src="/images/3.png" />
+			<img class="about__slide" src="/images/3.png" width="831" height="532" />
 		</SplideSlide>
 		<SplideSlide>
-			<img class="about__slide" src="/images/4.png" />
+			<img class="about__slide" src="/images/4.png" width="831" height="532" />
 		</SplideSlide>
 		<SplideSlide>
-			<img class="about__slide" src="/images/5.png" />
+			<img class="about__slide" src="/images/5.png" width="831" height="532" />
 		</SplideSlide>
 		<SplideSlide>
-			<img class="about__slide" src="/images/6.png" />
+			<img class="about__slide" src="/images/6.png" width="831" height="532" />
 		</SplideSlide>
 	</Splide>
 </div>
@@ -91,13 +91,13 @@
 		display: none;
 	}
 	.about-container {
-
 		background: url('/images/blobs/2.png') no-repeat center right;
 		background-size: contain;
 
 		@include indent(margin-bottom, red);
 
 		.about__slide {
+			width: auto;
 			@include xxl() {
 				height: 532px;
 			}
@@ -119,8 +119,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-top: 1px solid $white-1;
-		border-bottom: 1px solid $white-1;
+		border-top: 1px solid var(--white-1);
+		border-bottom: 1px solid var(--white-1);
 		@include indent(margin-bottom, pink);
 
 		@include xxl() {
@@ -188,7 +188,7 @@
 			}
 			.message {
 				@include indent(padding-top, steel-blue);
-				border-top: 1px solid $white-1;
+				border-top: 1px solid var(--white-1);
 			}
 		}
 		.text {
@@ -214,12 +214,12 @@
 				@include indent(padding-bottom, teal);
 			}
 			.subtext-1 {
-				border-top: 1px solid $white-1;
+				border-top: 1px solid var(--white-1);
 				@include indent(padding-top, teal);
 				@include indent(padding-bottom, teal);
 			}
 			.subtext-2 {
-				border-top: 1px solid $white-1;
+				border-top: 1px solid var(--white-1);
 				@include indent(padding-top, teal);
 			}
 		}

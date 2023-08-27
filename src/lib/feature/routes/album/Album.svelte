@@ -5,7 +5,6 @@
 
 	import { page } from '$app/stores';
 	const id = Number($page.params.slug);
-	
 </script>
 
 <div class="album">
@@ -83,7 +82,7 @@
 				width: 100%;
 				border-radius: 8px;
 			}
-			color: $white-2;
+			color: var(--white-2);
 			@include xxl() {
 				@include column(5);
 			}

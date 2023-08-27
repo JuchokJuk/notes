@@ -20,7 +20,7 @@
 	>
 	<div class="cards-grid">
 		{#each albums as album}
-			<AlbumCard {album}/>
+			<AlbumCard {album} />
 		{/each}
 	</div>
 </WidthControl>
@@ -31,8 +31,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-top: 1px solid $white-1;
-		border-bottom: 1px solid $white-1;
+		border-top: 1px solid var(--white-1);
+		border-bottom: 1px solid var(--white-1);
 
 		@include indent(margin-bottom, pink);
 
@@ -40,7 +40,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			border-right: 1px solid $white-1;
+			border-right: 1px solid var(--white-1);
 
 			@include xxl() {
 				@include column(2);
@@ -64,7 +64,7 @@
 			}
 
 			:global(svg) {
-				stroke: $white-1;
+				stroke: var(--white-1);
 				@include xxl() {
 					width: 136px;
 					height: 136px;

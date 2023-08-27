@@ -20,14 +20,14 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="title">
 				<Body3>Телефон</Body3>
 			</div>
 			<div class="contact">
 				<Body1>+7 (906) 183-06-49</Body1>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </WidthControl>
 
@@ -38,8 +38,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-top: 1px solid $white-1;
-		border-bottom: 1px solid $white-1;
+		border-top: 1px solid var(--white-1);
+		border-bottom: 1px solid var(--white-1);
 
 		@include indent(margin-bottom, pink);
 
@@ -62,12 +62,12 @@
 
 	.contacts {
 		display: grid;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 1fr /* 1fr */;
 		@include indent(margin-bottom, red);
 		@include indent(gap, lime);
 
 		.row {
-			border-bottom: 1px solid $white-1;
+			border-bottom: 1px solid var(--white-1);
 
 			@include xxl() {
 				display: flex;
@@ -104,7 +104,7 @@
 				@include s() {
 					width: 100%;
 					@include indent(padding-bottom, aqua);
-					border-bottom: 1px solid $white-1;
+					border-bottom: 1px solid var(--white-1);
 				}
 			}
 			.contact {
