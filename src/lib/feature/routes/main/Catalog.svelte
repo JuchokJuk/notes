@@ -4,7 +4,8 @@
 	import WidthControl from '$lib/feature/WidthControl.svelte';
 	import Star from '$lib/shared/icons/star.svg?raw';
 	import AlbumCard from '$lib/shared/AlbumCard.svelte';
-	import { albums } from '$lib/feature/Albums';
+	import type { Album } from '$lib/shared/API';
+	export let albums: Album[];
 </script>
 
 <WidthControl>

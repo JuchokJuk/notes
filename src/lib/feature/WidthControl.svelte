@@ -8,30 +8,19 @@
 	.width-control {
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	@include xxl() {
-		.width-control {
+		@include xxl() {
 			width: $content-xxl;
 		}
-	}
-	@include xl() {
-		.width-control {
+		@include xl() {
 			width: $content-xl;
 		}
-	}
-	@include l() {
-		.width-control {
+		@include l() {
 			width: $content-l;
 		}
-	}
-	@include m() {
-		.width-control {
+		@include m() {
 			width: $content-m;
 		}
-	}
-	@include s() {
-		.width-control {
+		@include s() {
 			width: $content-s;
 		}
 	}

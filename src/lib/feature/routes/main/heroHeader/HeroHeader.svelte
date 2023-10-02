@@ -4,7 +4,7 @@
 	import WidthControl from '$lib/feature/WidthControl.svelte';
 	import Headline1 from '$lib/shared/fontSystem/headlines/headline1/Headline1.svelte';
 	import Note from '$lib/shared/icons/note.svg?raw';
-	import ButtonLarge from '$lib/shared/buttons/ButtonLarge.svelte';
+	import ArrowButton from '$lib/shared/ArrowButton.svelte';
 </script>
 
 <WidthControl>
@@ -17,9 +17,9 @@
 				</div>
 				<div class="hero-header__top__author">
 					<div class="hero-header__top__author-wrapper">
-						<Body10>Исполнитель</Body10>
+						<Body10>Автор</Body10>
 						<div class="name">
-							<Body2>ГУРКИН</Body2>
+							<Body2>ГУРКИН{' '}</Body2>
 							<Body2>ВЛАДИМИР</Body2>
 						</div>
 					</div>
@@ -39,10 +39,10 @@
 		</div>
 		<div class="buttons-container">
 			<a href="/albums/0">
-				<ButtonLarge>СЛУШАТЬ</ButtonLarge>
+				<ArrowButton large>СЛУШАТЬ</ArrowButton>
 			</a>
 			<a href="/albums/0">
-				<ButtonLarge>КУПИТЬ</ButtonLarge>
+				<ArrowButton large>ПРИОБРЕСТИ</ArrowButton>
 			</a>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 @import '@/styles/variables.scss';
 
-.body10 {
+@mixin body10 {
 	font-family: inter;
 	font-weight: 400;
 	@include xxl() {
@@ -24,4 +24,8 @@
 		font-size: 14px;
 		line-height: 140%;
 	}
+}
+
+.body10 {
+	@include body10();
 }

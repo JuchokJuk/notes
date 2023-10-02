@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { breakpointStore, s, m, l, xl, xxl } from '../lib/feature/breakpointsStore';
-
 	import '../styles/global.scss';
 
 	import Footer from '$lib/feature/Footer.svelte';
 	import Header from '$lib/feature/Header.svelte';
+	import { onMount } from 'svelte';
+	import { currentUser, pb } from '$lib/feature/pocketbase';
 
 	const screenXxl = 2300;
 	const screenXl = 1680;
@@ -28,6 +29,23 @@
 		}
 		breakpointStore.update(() => breakpoint);
 	}
+
+	onMount(() => {
+		let device_uuid = localStorage.getItem('device_uuid');
+
+		if (device_uuid === null) {
+			const newDeviceUuid = crypto.randomUUID();
+			localStorage.setItem('device_uuid', crypto.randomUUID());
+			device_uuid = newDeviceUuid;
+		}
+
+		const data = {
+			user: $currentUser?.id,
+			device_uuid
+		};
+
+		pb.collection('views').create(data);
+	});
 </script>
 
 <svelte:window bind:innerWidth />

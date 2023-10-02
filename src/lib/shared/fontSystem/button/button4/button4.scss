@@ -1,6 +1,6 @@
 @import '@/styles/variables.scss';
 
-.button4 {
+@mixin button4 {
 	font-family: Inter;
 	font-weight: 400;
 	@include xxl() {
@@ -23,4 +23,8 @@
 		font-size: 16px;
 		line-height: 19px;
 	}
+}
+
+.button4 {
+	@include button4();
 }

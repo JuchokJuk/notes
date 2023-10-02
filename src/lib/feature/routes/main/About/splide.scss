@@ -1,0 +1,60 @@
+@import '@/styles/variables.scss';
+
+.splide__arrows {
+	display: flex;
+	justify-content: flex-end;
+
+	@include indent(margin-bottom, blue-violet);
+	margin-left: auto;
+	margin-right: auto;
+
+	@include xxl() {
+		width: $content-xxl;
+	}
+	@include xl() {
+		width: $content-xl;
+	}
+	@include l() {
+		width: $content-l;
+	}
+	@include m() {
+		width: $content-m;
+	}
+	@include s() {
+		width: $content-s;
+	}
+
+	.splide__arrow {
+		&:first-child {
+			transform: scaleX(-1);
+		}
+		svg {
+			transition: transform 0.4s;
+			fill: var(--white-1);
+
+			@include xxl() {
+				width: 40px;
+			}
+			@include xl() {
+				width: 40px;
+			}
+			@include l() {
+				width: 32px;
+			}
+			@include m() {
+				width: 28px;
+			}
+			@include s() {
+				width: 24px;
+			}
+		}
+	}
+
+	.splide__arrow {
+		@include hover {
+			svg {
+				transform: translateX(0.25em);
+			}
+		}
+	}
+}

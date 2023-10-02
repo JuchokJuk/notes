@@ -1,27 +1,53 @@
 <script lang="ts">
 	import Body7 from '$lib/shared/fontSystem/body/body7/Body7.svelte';
 	import Headline4 from '$lib/shared/fontSystem/headlines/headline4/Headline4.svelte';
-	import { albums } from '../../Albums';
+	import { fade } from 'svelte/transition';
 
-	import { page } from '$app/stores';
-	const id = Number($page.params.slug);
+	import Product from '$lib/shared/Product.svelte';
+	import type { ExpandedAlbum } from '$lib/shared/API';
+	import { currentUser, pb } from '$lib/feature/pocketbase';
+	import SignUpForm from '$lib/shared/SignUpForm.svelte';
+	import Modal from './Modal/Modal.svelte';
+	export let album: ExpandedAlbum;
+
+	const url = pb.files.getUrl(album, album.cover);
+
+	let modalOpen = false;
+
+	function closeModal() {
+		modalOpen = false;
+	}
+
+	function openModal() {
+		modalOpen = true;
+	}
 </script>
 
 <div class="album">
 	<div class="content">
-		<Headline4>{albums[id].name}</Headline4>
+		<Headline4>{album.name}</Headline4>
 
-		<div class="tracks">
-			{#each albums[id].tracks as track}
-				<audio src={track.url} controls />
-			{/each}
-		</div>
+		{#if album.expand?.products}
+			<div class="tracks">
+				{#each album.expand.products as product}
+					<Product {product} {openModal} />
+				{/each}
+			</div>
+		{/if}
 	</div>
 	<div class="video">
-		<video src={albums[id].videoUrl} loop muted autoplay />
-		<Body7>{albums[id].description}</Body7>
+		<video src={url} loop muted autoplay />
+		<Body7>{album.description}</Body7>
 	</div>
 </div>
+
+{#if !$currentUser && modalOpen}
+	<div transition:fade={{ duration: 400 }}>
+		<Modal {closeModal}>
+			<SignUpForm />
+		</Modal>
+	</div>
+{/if}
 
 <style lang="scss">
 	@import '@/styles/variables.scss';
@@ -67,11 +93,7 @@
 				flex-direction: column;
 				@include indent(margin-top, green);
 
-				@include indent(gap, blue-violet);
-
-				audio {
-					width: 100%;
-				}
+				@include indent(gap, steel-blue);
 			}
 		}
 		.video {

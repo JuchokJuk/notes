@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { Album } from '$lib/feature/Albums';
 	import Headline7 from '$lib/shared/fontSystem/headlines/headline7/Headline7.svelte';
 	import { onDestroy, onMount } from 'svelte';
-	import ArrowButton from './buttons/ArrowButton.svelte';
+	import ArrowButton from './ArrowButton.svelte';
+	import type { Album } from './API';
+	import { pb } from '$lib/feature/pocketbase';
 
 	export let album: Album;
 
@@ -18,7 +19,7 @@
 
 	//
 
-	let touchScreen: boolean = false;
+	let touchScreen = false;
 	let media: MediaQueryList | undefined;
 
 	function checkPointer() {
@@ -34,10 +35,12 @@
 	onDestroy(() => {
 		media?.removeEventListener('change', checkPointer);
 	});
+
+	const url = pb.files.getUrl(album, album.cover);
 </script>
 
 <a on:mouseover={play} on:mouseleave={pause} href={`/albums/${album.id}`}>
-	<video src={album.videoUrl} loop muted bind:this={video} />
+	<video src={url} loop muted bind:this={video} />
 	<Headline7>{album.name}</Headline7>
 	<ArrowButton>Слушать</ArrowButton>
 </a>

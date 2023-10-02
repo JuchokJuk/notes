@@ -15,7 +15,7 @@
 				&__author {
 					height: 254px;
 					@include column(3);
-					align-items: end;
+					align-items: flex-end;
 					border-left: 1px solid var(--white-1);
 
 					&-wrapper {
@@ -56,7 +56,7 @@
 				.headline {
 					@include column(8);
 					display: flex;
-					justify-content: end;
+					justify-content: flex-end;
 				}
 			}
 		}

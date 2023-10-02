@@ -1,15 +1,12 @@
 <script lang="ts">
-	import { albums } from '$lib/feature/Albums';
+	import type { Album } from '$lib/shared/API';
 	import AlbumCard from '$lib/shared/AlbumCard.svelte';
 
-	import { page } from '$app/stores';
-	const id = Number($page.params.slug);
-
-	const filteredAlbums = albums.filter((album) => album.id !== id);
+	export let albums: Album[];
 </script>
 
 <div class="cards-grid">
-	{#each filteredAlbums as album}
+	{#each albums as album}
 		<AlbumCard {album} />
 	{/each}
 </div>

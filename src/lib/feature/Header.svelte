@@ -11,9 +11,14 @@
 		</a>
 		<div class="header__right">
 			<div class="header__navigation">
-				<a href="/#about"><Button4>Обо мне</Button4></a>
-				<a href="/#catalog"><Button4>Каталог</Button4></a>
-				<a href="/#contacts"><Button4>Контакты</Button4></a>
+				<div class="navigation__row">
+					<a href="/#about"><Button4>Обо мне</Button4></a>
+					<a href="/#catalog"><Button4>Каталог</Button4></a>
+				</div>
+				<div class="navigation__row">
+					<a href="/#contacts"><Button4>Контакты</Button4></a>
+					<a href="/account"><Button4>Мой аккаунт</Button4></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -22,6 +27,9 @@
 <style lang="scss">
 	@import '@/styles/variables.scss';
 
+	a {
+		white-space: nowrap;
+	}
 	.header {
 		display: flex;
 		flex-direction: row;
@@ -46,7 +54,15 @@
 		&__navigation {
 			display: flex;
 			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-end;
 			@include indent(gap, steel-blue);
+
+			.navigation__row {
+				display: flex;
+				flex-direction: row;
+				@include indent(gap, steel-blue);
+			}
 		}
 	}
 
@@ -56,7 +72,7 @@
 			padding-bottom: 38px;
 			border-bottom: 2px solid var(--white-1);
 			&__left {
-				@include column(5);
+				// @include column(5);
 				:global(svg) {
 					width: 60px;
 					height: 60px;
@@ -70,7 +86,7 @@
 			padding-bottom: 26px;
 			border-bottom: 1.5px solid var(--white-1);
 			&__left {
-				@include column(5);
+				// @include column(5);
 				:global(svg) {
 					width: 44px;
 					height: 44px;
@@ -84,7 +100,7 @@
 			padding-bottom: 26px;
 			border-bottom: 1.5px solid var(--white-1);
 			&__left {
-				@include column(5);
+				// @include column(5);
 				:global(svg) {
 					width: 44px;
 					height: 44px;
@@ -98,7 +114,7 @@
 			padding-bottom: 22px;
 			border-bottom: 1.5px solid var(--white-1);
 			&__left {
-				@include column(7);
+				// @include column(7);
 				:global(svg) {
 					width: 44px;
 					height: 44px;
