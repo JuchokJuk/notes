@@ -20,14 +20,14 @@
 			</div>
 		</div>
 
-		<!-- <div class="row">
+		<div class="row">
 			<div class="title">
 				<Body3>Телефон</Body3>
 			</div>
 			<div class="contact">
 				<Body1>+7 (906) 183-06-49</Body1>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </WidthControl>
 

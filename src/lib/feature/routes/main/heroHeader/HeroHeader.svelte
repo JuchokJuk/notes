@@ -38,10 +38,10 @@
 			</div>
 		</div>
 		<div class="buttons-container">
-			<a href="/albums/0">
+			<a href="#catalog">
 				<ArrowButton large>СЛУШАТЬ</ArrowButton>
 			</a>
-			<a href="/albums/0">
+			<a href="#catalog">
 				<ArrowButton large>ПРИОБРЕСТИ</ArrowButton>
 			</a>
 		</div>

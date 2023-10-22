@@ -10,11 +10,11 @@
 	let video: HTMLVideoElement;
 
 	function play() {
-		if (!touchScreen) video.play();
+		if (!touchScreen && video.readyState === 4) video.play();
 	}
 
 	function pause() {
-		if (!touchScreen) video.pause();
+		if (!touchScreen && video.readyState === 4) video.pause();
 	}
 
 	//

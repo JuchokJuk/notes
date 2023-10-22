@@ -5,6 +5,7 @@
 	import type { ExpandedTransaction, Product as ProductData } from '$lib/shared/API';
 	import Headline6 from '$lib/shared/fontSystem/headlines/headline6/Headline6.svelte';
 	import Audio1 from '$lib/shared/fontSystem/audio/audio1/Audio1.svelte';
+	import Body7 from '$lib/shared/fontSystem/body/body7/Body7.svelte';
 
 	let transactions: ExpandedTransaction[] = [];
 
@@ -54,6 +55,10 @@
 	Вы вошли как {$currentUser?.email}
 </Headline6>
 
+<div class="description">
+	<Body7>Здесь вы сможете скачать купленные PDF файлы</Body7>
+</div>
+
 <div class="button">
 	<ArrowButton on:click={signOut}>Выйти</ArrowButton>
 </div>
@@ -69,7 +74,7 @@
 						getNotesLink(transaction.id);
 					}}
 				>
-					Скачать pdf файл
+					Скачать PDF файл
 				</ArrowButton>
 			</div>
 		</div>
@@ -78,6 +83,10 @@
 
 <style lang="scss">
 	@import '@/styles/variables.scss';
+	.description {
+		@include indent(margin-top, aquamarine);
+		@include indent(margin-bottom, aquamarine);
+	}
 	.button {
 		@include indent(margin-top, aquamarine);
 	}

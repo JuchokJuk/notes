@@ -39,7 +39,7 @@
 				buy(product.id);
 			}}
 		>
-			Купить за {product.price} ₽
+			Купить PDF за {product.price} ₽
 		</ArrowButton>
 	</div>
 </div>

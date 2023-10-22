@@ -46,12 +46,21 @@
 
 		pb.collection('views').create(data);
 	});
+
+	import { afterNavigate } from '$app/navigation';
+
+	let header: HTMLDivElement;
+
+	afterNavigate(() => {
+		console.log('fix scroll position');
+		header.scrollIntoView({ behavior: 'instant' });
+	});
 </script>
 
 <svelte:window bind:innerWidth />
 
 <div class="layout">
-	<div class="content">
+	<div class="content" bind:this={header}>
 		<Header />
 		<slot />
 	</div>

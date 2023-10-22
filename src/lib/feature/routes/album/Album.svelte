@@ -27,6 +27,10 @@
 	<div class="content">
 		<Headline4>{album.name}</Headline4>
 
+		<div class="description">
+			<Body7>Скачать купленные PDF файлы можно в <a href="/account">вашем аккаунте</a></Body7>
+		</div>
+
 		{#if album.expand?.products}
 			<div class="tracks">
 				{#each album.expand.products as product}
@@ -68,7 +72,7 @@
 			@include column-gap(gap, 1);
 		}
 		@include s() {
-			flex-direction: column;
+			flex-direction: column-reverse;
 			@include indent(gap, green);
 		}
 		.content {
@@ -87,7 +91,12 @@
 			@include s() {
 				@include column(2);
 			}
-
+			.description {
+				@include indent(margin-top, aquamarine);
+				a {
+					text-decoration: underline;
+				}
+			}
 			.tracks {
 				display: flex;
 				flex-direction: column;
