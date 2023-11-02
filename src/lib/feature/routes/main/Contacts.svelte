@@ -28,6 +28,24 @@
 				<Body1>+7 (906) 183-06-49</Body1>
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="title">
+				<Body3>ФИО</Body3>
+			</div>
+			<div class="contact">
+				<Body1>Гуркин Владимир Викторович</Body1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="title">
+				<Body3>ИНН</Body3>
+			</div>
+			<div class="contact">
+				<Body1>616898886427</Body1>
+			</div>
+		</div>
 	</div>
 </WidthControl>
 
@@ -108,6 +126,8 @@
 				}
 			}
 			.contact {
+				text-align: right;
+
 				@include s() {
 					height: 80px;
 					display: flex;
