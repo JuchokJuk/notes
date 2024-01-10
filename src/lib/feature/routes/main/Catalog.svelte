@@ -15,13 +15,13 @@
 		</div>
 		<Headline1>Каталог.</Headline1>
 	</div>
-	<Body6
-		>Все представленные произведения даются без обозначений аппликатуры, динамики, нюансировки и
-		решаются самим исполнителем или его педагогом.</Body6
-	>
+	<Body6>
+		Все представленные произведения даются без обозначений аппликатуры, динамики, нюансировки и
+		решаются самим исполнителем или его педагогом.
+	</Body6>
 	<div class="cards-grid">
-		{#each albums as album}
-			<AlbumCard {album} />
+		{#each albums as album, index}
+			<AlbumCard {album} note={index % 2 === 0 ? 'quaver' : 'beam note'} />
 		{/each}
 	</div>
 </WidthControl>

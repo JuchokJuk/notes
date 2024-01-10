@@ -6,8 +6,8 @@
 </script>
 
 <div class="cards-grid">
-	{#each albums as album}
-		<AlbumCard {album} />
+	{#each albums as album, index}
+		<AlbumCard {album} note={index % 2 === 0 ? 'quaver' : 'beam note'}/>
 	{/each}
 </div>
 
