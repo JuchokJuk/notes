@@ -30,6 +30,7 @@ export async function POST({ request }) {
 				value: productRecord.price,
 				currency: 'RUB'
 			},
+			capture: true,
 			payment_method_data: {
 				type: 'bank_card'
 			},
