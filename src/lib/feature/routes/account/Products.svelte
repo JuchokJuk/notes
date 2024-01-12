@@ -36,13 +36,6 @@
 				throw new Error(data.error);
 			} else {
 				window.location.href = data.url;
-
-				const link = document.createElement("a");
-				link.download = name;
-				link.href = data.url;
-				document.body.appendChild(link);
-				link.click();
-				document.body.removeChild(link);
 			}
 		} catch (e) {
 			console.log(e);
@@ -75,10 +68,10 @@
 		<div class="container">
 			<Audio1>{transaction.expand.product.name}</Audio1>
 			<div class="column">
-				<audio src={getUrl(transaction.expand.product, transaction.expand.product.name)} controls />
+				<audio src={getUrl(transaction.expand.product)} controls />
 				<ArrowButton
 					on:click={() => {
-						getNotesLink(transaction.id);
+						getNotesLink(transaction.id, transaction.expand.product.name);
 					}}
 				>
 					Скачать PDF файл

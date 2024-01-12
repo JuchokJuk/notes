@@ -7,8 +7,7 @@
 	import HeroHeader from '$lib/feature/routes/main/heroHeader/HeroHeader.svelte';
 	import type { AlbumsData } from './+page';
 
-
-	const title = "Произведения для гитары"
+	const title = 'Произведения для гитары';
 	const description =
 		'Меня зовут Гуркин Владимир Викторович. Представляю на этом сайте свои гитарные произведения, написанные в жанре инструментальной миниатюры.';
 </script>

@@ -39,8 +39,9 @@
 
 	// const url = pb.files.getUrl(album, album.cover);
 </script>
+
 <!-- on:mouseover={play} on:mouseleave={pause} -->
-<a  href={`/albums/${album.id}`}>
+<a href={`/albums/${album.id}`}>
 	<!-- <video src={url} loop muted bind:this={video} /> -->
 
 	<div class="square">

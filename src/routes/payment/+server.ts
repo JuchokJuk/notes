@@ -15,7 +15,7 @@ const checkout = new YooCheckout({ shopId: YOOKASSA_SHOP_ID, secretKey: YOOKASSA
 
 const pb = new PocketBase(PUBLIC_POCKETBASE_URL);
 
-export async function POST({ request }) {
+export async function POST({ request }: { request: Request }) {
 	try {
 		await pb.admins.authWithPassword(POCKETBASE_ADMIN_EMAIL, POCKETBASE_ADMIN_PASSWORD);
 
