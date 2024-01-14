@@ -35,7 +35,19 @@
 			if (data.error !== undefined) {
 				throw new Error(data.error);
 			} else {
-				window.location.href = data.url;
+				const response = await fetch(data.url);
+				const file = await response.blob();
+				const objectURL = URL.createObjectURL(file);
+
+				const downloadLink = document.createElement('a');
+				downloadLink.href = objectURL;
+				downloadLink.download = name;
+				downloadLink.click();
+
+				const link = document.createElement('a');
+				link.href = data.url;
+				link.target = '_blank';
+				link.click();
 			}
 		} catch (e) {
 			console.log(e);
