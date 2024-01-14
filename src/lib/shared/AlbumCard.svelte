@@ -46,13 +46,18 @@
 
 	<div class="square">
 		{#if note === 'quaver'}
-			<svg viewBox="0 0 39 58" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-quaver">
+			<svg
+				viewBox="0 0 39 58"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+				class="rotate-quaver"
+				stroke="currentColor"
+			>
 				<path
 					d="M19.78 47.7297C19.78 53.0832 15.4617 57.4189 10.14 57.4189C4.81825 57.4189 0.5 53.0832 0.5 47.7297C0.5 42.3762 4.81825 38.0405 10.14 38.0405C15.4617 38.0405 19.78 42.3762 19.78 47.7297Z"
-					stroke="white"
 				/>
-				<line x1="19.7798" y1="48.0989" x2="19.7798" y2="0.288067" stroke="white" />
-				<line x1="38.415" y1="0.5" x2="19.695" y2="0.499989" stroke="white" />
+				<line x1="19.7798" y1="48.0989" x2="19.7798" y2="0.288067" />
+				<line x1="38.415" y1="0.5" x2="19.695" y2="0.499989" />
 			</svg>
 		{:else}
 			<svg
@@ -62,12 +67,12 @@
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
 				class="rotate-beam-note"
+				stroke="currentColor"
 			>
-				<ellipse cx="6.68179" cy="25.5632" rx="5.51724" ry="5.66038" stroke="white" />
-				<ellipse cx="27.3712" cy="25.3396" rx="5.51724" ry="5.66038" stroke="white" />
+				<ellipse cx="6.68179" cy="25.5632" rx="5.51724" ry="5.66038" />
+				<ellipse cx="27.3712" cy="25.3396" rx="5.51724" ry="5.66038" />
 				<path
 					d="M12.1992 25.3396V6.46276M12.1992 6.46276H32.8889M12.1992 6.46276V1H32.8889V6.46276M32.8889 25.2182V6.46276"
-					stroke="white"
 				/>
 			</svg>
 		{/if}
@@ -161,6 +166,7 @@
 			svg {
 				height: 50%;
 				width: 50%;
+
 				&.rotate-quaver {
 					animation: rotate-quaver 6s ease-in-out infinite;
 				}

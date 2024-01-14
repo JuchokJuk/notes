@@ -49,12 +49,12 @@
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
 				class="rotate-beam-note"
+				stroke="currentColor"
 			>
-				<ellipse cx="6.68179" cy="25.5632" rx="5.51724" ry="5.66038" stroke="white" />
-				<ellipse cx="27.3712" cy="25.3396" rx="5.51724" ry="5.66038" stroke="white" />
+				<ellipse cx="6.68179" cy="25.5632" rx="5.51724" ry="5.66038" />
+				<ellipse cx="27.3712" cy="25.3396" rx="5.51724" ry="5.66038" />
 				<path
 					d="M12.1992 25.3396V6.46276M12.1992 6.46276H32.8889M12.1992 6.46276V1H32.8889V6.46276M32.8889 25.2182V6.46276"
-					stroke="white"
 				/>
 			</svg>
 		</div>
